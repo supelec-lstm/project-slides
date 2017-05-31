@@ -1,5 +1,6 @@
 *
 !.gitignore
 !slides.tex
+!slides.pdf
 !images/
 !images/*
