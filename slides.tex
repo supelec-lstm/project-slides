@@ -9,7 +9,7 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{array}
-\usepackage{pgf,tikz} 
+\usepackage{pgf,tikz}
 \usepackage{graphicx}
 \usepackage{subfig}
 %\usepackage{media9}
@@ -25,7 +25,7 @@
 \expandafter\def\expandafter\insertshorttitle\expandafter{%
   \insertshorttitle\hfill%
   \insertframenumber\,/\,\inserttotalframenumber}
-  
+
 \AtBeginSection[]{
   \begin{frame}
   \vfill
@@ -52,8 +52,93 @@
 \titlepage
 \end{frame}
 
-\begin{frame}
-Séparation
+\section{Introduction}
+
+\begin{frame}{Objectifs du projet}
+  \begin{itemize}
+    \item<1-> Étudier les publications originelles
+    \item<2-> Implémenter un réseau simple
+    \item<3-> Étudier les algorithmes de traitement de séquence
+    \item<4-> Implémenter ces algorithmes
+    \item<5-> Découvrir la cellule LSTM et l'implémenter
+  \end{itemize}
+\end{frame}
+
+\section{Ressources}
+
+\begin{frame}{Organisation}
+  \begin{itemize}
+    \item Réunion hebdomadaire
+    \item Suivi des encadrants
+    \item Répartition des tâches
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Languages et outils}
+  \begin{itemize}
+    \item Python et Numpy, C++ et Eigen
+    \item Github et TravisCI
+    \item Zotero
+    \item LaTeX
+  \end{itemize}
+\end{frame}
+
+\section{Principes généraux des réseaux de neurones}
+
+\begin{frame}{Réseau de neurones}
+  \begin{figure}
+  \begin{center}
+  \includegraphics[scale=0.4]{images/reseau_simple.png}
+  \caption{Exemple de réseau simple}
+  \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Propagation}
+  \begin{figure}
+  \begin{center}
+  \includegraphics[scale=0.70]{images/propagation_simple.png}
+  \caption{Propagation dans une cellule simple}
+  \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Rétropropagation et méthode du gradient}
+  \begin{figure}
+  \begin{center}
+  \includegraphics[scale=0.37]{images/descente_gradient.png}
+  \caption{Exemples de descente du gradient}
+  \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Problème type : MNIST}
+  \begin{figure}
+  \begin{center}
+  \includegraphics[scale=1.1]{images/mnist_data.png}
+  \caption{Exemple de données du MNIST}
+  \end{center}
+  \end{figure}
+\end{frame}
+
+\section{Traitement de séquences, introduction aux réseaux récurrents}
+
+\begin{frame}{BPTT}
+  \begin{figure}
+  \begin{center}
+  \includegraphics[scale=0.15]{images/bptt.png}
+  \caption{Dépliement dans l'espace}
+  \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{LSTM}
+  \begin{figure}
+  \begin{center}
+  \includegraphics[scale=.37]{images/lstm_bptt.png}
+  \caption{Dépliement dans l'espace}
+  \end{center}
+  \end{figure}
 \end{frame}
 
 \section{Génération de séquences avec des LSTM}
