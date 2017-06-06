@@ -110,7 +110,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Rétropropagation et méthode du gradient}
+\begin{frame}{Méthode du gradient}
   \begin{figure}
   \begin{center}
   \includegraphics[scale=0.37]{images/descente_gradient.png}
@@ -118,6 +118,16 @@
   {\tiny Source: http://ludovicarnold.altervista.org/teaching/optimization/gradient-descent/}
   \end{center}
   \end{figure}
+\end{frame}
+
+\begin{frame}{Rétropropagation}
+  L'objectif est d'évaluer pour tout $w_{ij}^{(k)}$ :
+   $\cfrac{\partial E}{\partial w_{ij}^{(k)}}$.
+
+  \begin{align*}
+  \cfrac{\partial E}{\partial w_{ij}^{(k)}} &= \sum_{l = 1}^{M} \cfrac{\partial y_l^{(K)}}{\partial w_{ij}^{(k)}} \times \cfrac{\partial E}{\partial y_l}\\
+  \end{align*}
+
 \end{frame}
 
 \begin{frame}{Problème type : MNIST}
@@ -184,10 +194,10 @@ Sir, af you have fellow’s their eyes live?
 \begin{figure}
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
-\hline 
+\hline
 \textbf{Génération} & \textbf{de spectres} & \textbf{MIDI} & \textbf{de partitions} \\
 \hline
-Pas de temps & Libres & Libres & Contraints \\ 
+Pas de temps & Libres & Libres & Contraints \\
 \hline
 Hauteurs & Libres & Contraintes & Contraintes \\
 \hline
